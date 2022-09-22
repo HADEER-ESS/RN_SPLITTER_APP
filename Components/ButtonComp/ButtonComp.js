@@ -8,7 +8,6 @@ export default function ButtonCompGroup({percentages }) {
   const {tip , setTip , countTipsFun , people , bill , ClickedId , setClickedId} = useContext(AppContext)
   const changeButton = (percentage , id) => {   
     setClickedId(id) 
-    console.log("clicked id from inpress function " , ClickedId )
     const num = percentage.split('%');
     if (bill !== 0 && people !== 0 && tip !== 0) {
       setTip(num[0])
@@ -18,7 +17,7 @@ export default function ButtonCompGroup({percentages }) {
   const handleActivate = () => {
     setTip(null)
     setClickedId(null)
-    console.log("clicked id from long press function" , ClickedId , "tip ... " , tip )
+
   }
   return (
     <View

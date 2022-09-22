@@ -4,7 +4,7 @@ export const AppContext = createContext()
 
 export default AppProvider = ({children}) => {
     const [bill , setBill] = useState(null)
-    const [people , setPeople] = useState(null)
+    const [people , setPeople] = useState(1)
     const [tip , setTip] = useState(null)
     const [result , setResult ] = useState(0.00)
     const [totalTip , setTotalTip] = useState(0.00)

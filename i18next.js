@@ -1,9 +1,18 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import i18n from "i18next";
+import { useEffect } from "react";
 import { initReactI18next } from "react-i18next";
 
+const userLanguage = window.navigator.language
+const storagedLanguage = async() =>{
+    i18n.changeLanguage(await AsyncStorage.getItem('langauge'))
+}
+useEffect(()=>{storagedLanguage()},[])
 i18n.use(initReactI18next).init({
     compatibilityJSON : "v3",
-    lng : "en" , 
+    lang : storagedLanguage() ||userLanguage|| "en",
+    fallbackLng : "en",
+    debug: true,
     resources : {
         en : {
             translation : {
