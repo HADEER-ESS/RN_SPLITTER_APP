@@ -1,6 +1,6 @@
 <h1>Application Description</h1>
 
-<h3>Techniques</h3>
+<h3>Technology</h3>
 <p>-Use Context for the state management</p>
 <p>-I18next package for Language change</p>
 <p>-Switch between default Tip% and add a custome one.</p>
